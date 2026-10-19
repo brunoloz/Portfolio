@@ -17,8 +17,23 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main id="inicio">
-      <section class="hero section">
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="#inicio">Bruno Lozano</a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca-de">Acerca de mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#certificaciones">Certificaciones</a></li>
+            <li><a href="#logros">Logros</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
         <div class="container hero-grid">
           <div class="hero-content">
             <h1>Bruno Lozano Clemente</h1>
@@ -29,41 +44,50 @@
               <li><a href="https://www.linkedin.com/in/bruno-lozano-clemente-578b77385/?isSelfProfile=true" target="_blank" rel="noreferrer">LinkedIn</a></li>
               <li><a href="https://github.com/brunoloz" target="_blank" rel="noreferrer">GitHub</a></li>
             </ul>
-            <div class="about-layout">
-              <div class="about-copy">
-                <p class="eyebrow">Acerca de mí</p>
-                <p class="lead">
-              Soy Bruno, estudiante de último año de Ingeniería de Computadores en la Universidad Complutense de Madrid.
-                <br> Tengo un gran interés tanto en el desarrollo hardware como software. Además, me apasionan áreas como el desarrollo web, 
-                 la róbotica, la programación a bajo nivel y la Inteligencia Artificial.
-                 <br>
-                 <br>
-                  Cuento con un nivel intermedio y consolidado de inglés que me permite consultar documentación técnica y comunicarme
-                  de forma efectiva. Disfruto mucho aprendiendo el idioma y dedico tiempo de forma proactiva para dominarlo.                 <br>
-                 <br>
-                 Fuera de la pantalla, soy apasionado del deporte. Preparar y terminar una media maratón me ha enseñado que los grandes retos necesitan de constancia, responsabilidad, compromiso y capacidad analítica.
-                <br>
-                <br>
-               Actualmente me encuentro en búsqueda de una empresa donde realizar
-               prácticas curriculares, adentrarme al mundo laboral y aplicar lo aprendido en un entorno real, mientras continúo con mi formación académica.
-                </p>
-              </div>
-              <div id="lenguajes" class="language-chart">
-                <p class="eyebrow">Habilidades</p>
-                <ul
-                  id="language-stats"
-                  class="language-chart-list"
-                  aria-label="Lenguajes de programación, en el orden indicado"
-                ></ul>
-              </div>
-            </div>
-            <div class="cta-row">
-              <a class="button primary" href="#proyectos">Ver proyectos</a>
-              <a class="button secondary" href="#certificaciones">Certificaciones</a>
-              <a class="button secondary" href="#logros">Otros logros</a>
-
-            </div>
           </div>
+        </div>
+      
+        <br>
+        <br>
+        <br>
+        <div class="container">
+          <div class="skills-grid">
+            <article class="language-chart">
+              <h3 class="section-tag">Lenguajes de programación</h3>
+              <ul id="programming-stats" class="language-chart-list" aria-label="Nivel orientativo en lenguajes de programación"></ul>
+            </article>
+            <article class="language-chart">
+              <h3 class="section-tag">Habilidades</h3>
+              <ul id="technical-skills" class="language-chart-list" aria-label="Nivel orientativo en áreas técnicas"></ul>
+            </article>
+            <article class="language-chart">
+              <h3 class="section-tag">Idiomas</h3>
+              <ul id="spoken-languages" class="language-chart-list" aria-label="Nivel orientativo en idiomas"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="acerca-de" class="section about-section">
+        <div class="container about-copy">
+          <h3 class="section-tag">Acerca de mí</h3>
+          <p class="lead">
+            Soy Bruno, estudiante de último año de Ingeniería de Computadores en la Universidad Complutense de Madrid.
+            Tengo un gran interés tanto en el desarrollo hardware como software. Además, me apasionan áreas como el desarrollo web,
+            la robótica, la programación a bajo nivel y la Inteligencia Artificial.
+          </p>
+          <p class="lead">
+            Cuento con un nivel intermedio y consolidado de inglés que me permite consultar documentación técnica y comunicarme
+            de forma efectiva. Disfruto mucho aprendiendo el idioma y dedico tiempo de forma proactiva para dominarlo.
+          </p>
+          <p class="lead">
+            Fuera de la pantalla, soy apasionado del deporte. Preparar y terminar una media maratón me ha enseñado que los grandes
+            retos necesitan de constancia, responsabilidad, compromiso y capacidad analítica.
+          </p>
+          <p class="lead">
+            Actualmente me encuentro en búsqueda de una empresa donde realizar prácticas curriculares, adentrarme al mundo laboral
+            y aplicar lo aprendido en un entorno real, mientras continúo con mi formación académica.
+          </p>
         </div>
       </section>
 
@@ -71,8 +95,7 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <p class="section-tag">Proyectos</p>
-              <h2>Algunos proyectos que he realizado durante mis estudios.</h2>
+              <h3 class="section-tag">Proyectos</h3>
             </div>
           </div>
 
@@ -137,7 +160,7 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <p class="section-tag">Títulos y certificaciones</p>
+              <h3 class="section-tag">Títulos y certificaciones</h3>
             </div>
           </div>
 
@@ -180,8 +203,7 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <p class="section-tag">Otros logros</p>
-              <h2>Retos personales</h2>
+              <h3 class="section-tag">Otros logros</h3>
             </div>
           </div>
 
