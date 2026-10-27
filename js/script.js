@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'C', level: 74.75 },
     { name: 'Java', level: 72.45 },
     { name: 'JavaScript', level: 59.8 },
-    { name: 'VHDL', level: 40.48 },
-    { name: 'Python', level: 37.95 },
+    { name: 'Python', level: 46.95 },
+    { name: 'VHDL', level: 37.48 },
+    
   ]);
 
   renderBars('technical-skills', [
