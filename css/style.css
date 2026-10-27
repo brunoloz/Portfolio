@@ -162,30 +162,6 @@ img {
   text-align: center;
 }
 
-.intro-contact {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8px 18px;
-  list-style: none;
-  margin-top: 14px;
-  margin-bottom: 30px;
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.intro-contact li + li::before {
-  content: "•";
-  color: var(--secondary);
-  margin-right: 18px;
-}
-
-.intro-contact a:hover,
-.intro-contact a:focus-visible {
-  color: var(--secondary);
-}
-
 .hero-welcome {
   max-width: 720px;
   margin: 0 auto;
@@ -625,24 +601,28 @@ img {
   object-position: top;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 32px 48px;
-  align-items: center;
+.contact-intro {
+  margin-bottom: 36px;
 }
 
-.contact-grid p {
+.contact-intro p,
+.contact-card {
+  font-family: "Inter", sans-serif;
+}
+
+.contact-intro p {
   color: var(--muted);
   margin-top: 14px;
 }
 
 .contact-cards {
   display: grid;
-  gap: 16px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 25px;
 }
 
 .contact-card {
+  grid-column: span 2;
   display: block;
   padding: 22px 20px;
   background: rgba(17, 24, 39, 0.7);
@@ -651,18 +631,42 @@ img {
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.contact-card:hover {
+.contact-card:nth-last-child(2) {
+  grid-column: 2 / span 2;
+}
+
+.contact-card:last-child {
+  grid-column: 4 / span 2;
+}
+
+.contact-card:hover,
+.contact-card:focus-visible {
   transform: translateY(-2px);
   border-color: rgba(229, 189, 104, 0.48);
 }
 
-.contact-card span {
+.contact-card > span {
   display: block;
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--secondary);
   margin-bottom: 8px;
+}
+
+.contact-card .contact-card-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contact-icon {
+  min-width: 1.5em;
+  font: inherit;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: none;
 }
 
 .contact-card strong {
@@ -687,7 +691,6 @@ img {
 @media (max-width: 900px) {
   .hero-grid,
   .two-columns,
-  .contact-grid,
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -737,12 +740,14 @@ img {
     grid-column: auto;
   }
 
-  .intro-contact {
-    gap: 8px 12px;
+  .contact-cards {
+    grid-template-columns: 1fr;
   }
 
-  .intro-contact li + li::before {
-    margin-right: 12px;
+  .contact-card,
+  .contact-card:nth-last-child(2),
+  .contact-card:last-child {
+    grid-column: auto;
   }
 
   .highlights {
