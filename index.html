@@ -6,12 +6,13 @@
     <meta
       name="description"
       content="Portfolio personal de Bruno Lozano Clemente, desarrollador full stack con experiencia en frontend, backend y diseño de productos digitales."
+      data-i18n="page-description"
     />
     <title>Portfolio - Bruno Lozano Clemente</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400..900&family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@1,400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400..900&family=Caveat:wght@500;600&family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@1,400..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -20,17 +21,34 @@
     <header class="site-header">
       <div class="container header-row">
         <a class="brand" href="#inicio">Bruno Lozano Clemente</a>
-        <nav class="main-nav" aria-label="Navegación principal">
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#acerca-de">Acerca de mí</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#aptitudes">Aptitudes</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#certificaciones">Certificaciones</a></li>
-            <li><a href="#logros">Logros</a></li>
-          </ul>
-        </nav>
+        <div class="header-actions">
+          <nav class="main-nav" id="main-nav" aria-label="Navegación principal" data-i18n-aria-label="nav-label" hidden>
+            <ul>
+              <li><a href="#inicio" data-i18n="nav-home">Inicio</a></li>
+              <li><a href="#acerca-de" data-i18n="nav-about">Acerca de mí</a></li>
+              <li><a href="#contacto" data-i18n="nav-contact">Contacto</a></li>
+              <li><a href="#aptitudes" data-i18n="nav-skills">Aptitudes</a></li>
+              <li><a href="#proyectos" data-i18n="nav-projects">Proyectos</a></li>
+              <li><a href="#certificaciones" data-i18n="nav-certifications">Certificaciones</a></li>
+              <li><a href="#logros" data-i18n="nav-achievements">Logros</a></li>
+            </ul>
+          </nav>
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Abrir menú de navegación"
+            aria-controls="main-nav"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <button class="language-toggle" id="language-toggle" type="button" aria-label="Cambiar idioma a inglés">
+            English
+          </button>
+        </div>
       </div>
     </header>
 
@@ -38,21 +56,26 @@
       <section id="inicio" class="hero">
         <div class="container hero-grid">
           <div class="hero-content">
-            <h1>Bruno Lozano Clemente </h1>
-            <br>
-            <p class="hero-welcome">
-              ¡Hola, viajero/a digital! Soy Bruno, un entusiasta de la tecnología.
-              <br>
-              Aquí podrás descubrir mis proyectos, habilidades y aficiones.
-              <br>
-              Te invito a acompañarme en este apasionante mundo de la informática.
-            </p>
-            <br>
+            <p class="eyebrow hero-eyebrow" data-i18n="hero-eyebrow">Software · Hardware · IA</p>
+            <h1 data-i18n="hero-name">Bruno Lozano Clemente</h1>
+            <h2 class="hero-title" data-i18n="hero-title">Desarrollo soluciones digitales, desde la web hasta el hardware.</h2>
+            <p class="hero-description" data-i18n="hero-description">
+                  Soy Bruno, un entusiasta de la tecnología.
+                  Aquí podrás descubrir mis proyectos, habilidades y aficiones.
+                  Te invito a acompañarme en este apasionante mundo de la informática.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#proyectos" data-i18n="hero-projects">Explorar proyectos</a>
+              <a class="button secondary" href="#contacto" data-i18n="hero-contact">Contactar</a>
+            </div>
+          </div>
+          <div class="hero-art">
             <img
               class="hero-curiosity"
               src="images/curiosity.png"
               alt="Ilustración dorada de personas avanzando hacia sus metas"
+              data-i18n-alt="hero-image-alt"
             />
+            <p class="hero-slogan" data-i18n="hero-slogan">Analiza, fija un objetivo y alcánzalo.</p>
           </div>
         </div>
       </section>
@@ -62,21 +85,21 @@
 
       <section id="acerca-de" class="section about-section">
         <div class="container about-copy">
-          <h3 class="section-tag">Acerca de mí</h3>
-          <p class="lead">
+          <h3 class="section-tag" data-i18n="about-heading">Acerca de mí</h3>
+          <p class="lead" data-i18n="about-1">
             Soy Bruno, estudiante de último año de Ingeniería de Computadores en la Universidad Complutense de Madrid.
             Tengo un gran interés tanto en el desarrollo hardware como software. Además, me apasionan áreas como el desarrollo web,
             la robótica, la programación a bajo nivel y la Inteligencia Artificial.
           </p>
-          <p class="lead">
+          <p class="lead" data-i18n="about-2">
             Cuento con un nivel intermedio y consolidado de inglés que me permite consultar documentación técnica y comunicarme
             de forma efectiva. Disfruto mucho aprendiendo el idioma y dedico tiempo de forma proactiva para dominarlo.
           </p>
-          <p class="lead">
+          <p class="lead" data-i18n="about-3">
             Fuera de la pantalla, soy apasionado del deporte. Preparar y completar una media maratón me ha enseñado que los grandes
             retos necesitan de constancia, responsabilidad, compromiso y capacidad analítica.
           </p>
-          <p class="lead">
+          <p class="lead" data-i18n="about-4">
             Actualmente me encuentro en búsqueda de una empresa donde realizar prácticas curriculares, adentrarme al mundo laboral
             y aplicar lo aprendido en un entorno real, mientras continúo con mi formación académica.
           </p>
@@ -85,23 +108,23 @@
 
       <section id="contacto" class="section">
         <div class="container about-copy">
-            <h2 class="section-tag">Contacto</h2>
-          <div class="contact-cards" aria-label="Datos de contacto">
+            <h2 class="section-tag" data-i18n="contact-heading">Contacto</h2>
+          <div class="contact-cards" aria-label="Datos de contacto" data-i18n-aria-label="contact-label">
             <div class="contact-card">
               <span class="contact-card-label">
-                Ubicación
+                <span data-i18n="contact-location">Ubicación</span>
               </span>
               <strong class="lead">Madrid, España</strong>
             </div>
             <a class="contact-card">
               <span class="contact-card-label">
-                Teléfono
+                <span data-i18n="contact-phone">Teléfono</span>
               </span>
               <strong class="lead">+34 678 38 25 45</strong>
             </a>
             <a class="contact-card" href="mailto:brunolocle@gmail.com">
               <span class="contact-card-label">
-                Correo electrónico
+                <span data-i18n="contact-email">Correo electrónico</span>
               </span>
               <strong class="lead">brunolocle@gmail.com</strong>
             </a>
@@ -125,19 +148,19 @@
 
       <section id="aptitudes" class="section about-section">
         <div class="container about-copy">
-          <h3 class="section-tag">Aptitudes</h3>
+          <h3 class="section-tag" data-i18n="skills-heading">Aptitudes</h3>
           <div class="skills-grid">
             <article class="language-chart">
-              <h3 class="section-tag">Lenguajes de programación</h3>
-              <ul id="programming-stats" class="language-chart-list" aria-label="Nivel orientativo en lenguajes de programación"></ul>
+              <h3 class="section-tag" data-i18n="programming-heading">Lenguajes de programación</h3>
+              <ul id="programming-stats" class="language-chart-list" aria-label="Nivel orientativo en lenguajes de programación" data-i18n-aria-label="programming-label"></ul>
             </article>
             <article class="language-chart">
-              <h3 class="section-tag">Habilidades</h3>
-              <ul id="technical-skills" class="language-chart-list" aria-label="Nivel orientativo en áreas técnicas"></ul>
+              <h3 class="section-tag" data-i18n="technical-heading">Habilidades</h3>
+              <ul id="technical-skills" class="language-chart-list" aria-label="Nivel orientativo en áreas técnicas" data-i18n-aria-label="technical-label"></ul>
             </article>
             <article class="language-chart">
-              <h3 class="section-tag">Idiomas</h3>
-              <ul id="spoken-languages" class="language-chart-list" aria-label="Nivel orientativo en idiomas"></ul>
+              <h3 class="section-tag" data-i18n="languages-heading">Idiomas</h3>
+              <ul id="spoken-languages" class="language-chart-list" aria-label="Nivel orientativo en idiomas" data-i18n-aria-label="languages-label"></ul>
             </article>
           </div>
         </div>
@@ -147,15 +170,15 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <h3 class="section-tag">Proyectos</h3>
+              <h3 class="section-tag" data-i18n="projects-heading">Proyectos</h3>
             </div>
           </div>
 
           <div class="project-grid">
             <article class="project-card">
-              <span class="project-category">Aplicación Web</span>
+              <span class="project-category" data-i18n="match-category">Aplicación Web</span>
               <h3>Match4ll</h3>
-              <p>
+              <p data-i18n="match-description">
 Desarrollé durante cuatro meses, colaborando en un equipo de tres estudiantes, una aplicación web para la gestión de competiciones y equipos de fútbol utilizando Java y Spring Boot. Participé en el desarrollo y en su despliegue en un entorno de contenedores basado en Docker, utilizando Apache Guacamole.
               </p>
               <ul>
@@ -167,14 +190,14 @@ Desarrollé durante cuatro meses, colaborando en un equipo de tres estudiantes, 
                 <li>Docker</li>
               </ul>
               <a href="https://github.com/brunoloz/IW-Match4All" target="_blank" rel="noopener noreferrer">
-                Ver repositorio en GitHub
+                <span data-i18n="repository-link">Ver repositorio en GitHub</span>
               </a>
             </article>
 
             <article class="project-card">
-              <span class="project-category">Robótica</span>
+              <span class="project-category" data-i18n="robotics-category">Robótica</span>
               <h3>Manta ReyBot</h3>
-              <p>
+              <p data-i18n="manta-description">
                 Desarrollé en C un robot móvil autónomo sobre una Raspberry Pi 3, integrando sensores CNY70 y GP2Y0A41SK0F para implementar
                  seguimiento de línea y detección/evasión de obstáculos.
               </p>
@@ -184,14 +207,14 @@ Desarrollé durante cuatro meses, colaborando en un equipo de tres estudiantes, 
                 <li>CNY70/GP2Y0A41SK0F</li>
               </ul>
               <a href="https://github.com/brunoloz/Manta-ReyBot" target="_blank" rel="noopener noreferrer">
-                Ver repositorio en GitHub
+                <span data-i18n="repository-link">Ver repositorio en GitHub</span>
               </a>
             </article>
 
             <article class="project-card">
-              <span class="project-category">Hardware</span>
-              <h3>Parquímetro suizo</h3>
-              <p>
+              <span class="project-category" data-i18n="hardware-category">Hardware</span>
+              <h3 data-i18n="parking-title">Parquímetro suizo</h3>
+              <p data-i18n="parking-description">
                 Implementé en C un sistema de gestión para un parquímetro, utilizando UART y emulación de hardware para gestionar plazas numeradas, 
                 controlar el tiempo de estacionamiento y procesar pagos.
               </p>
@@ -201,7 +224,7 @@ Desarrollé durante cuatro meses, colaborando en un equipo de tres estudiantes, 
                 <li>UART</li>
               </ul>
               <a href="https://github.com/brunoloz/PSyD-24-25" target="_blank" rel="noopener noreferrer">
-                Ver repositorio en GitHub
+                <span data-i18n="repository-link">Ver repositorio en GitHub</span>
               </a>
             </article>
           </div>
@@ -212,7 +235,7 @@ Desarrollé durante cuatro meses, colaborando en un equipo de tres estudiantes, 
         <div class="container">
           <div class="section-head">
             <div>
-              <h3 class="section-tag">Títulos y certificaciones</h3>
+              <h3 class="section-tag" data-i18n="certifications-heading">Títulos y certificaciones</h3>
             </div>
           </div>
 
@@ -220,11 +243,11 @@ Desarrollé durante cuatro meses, colaborando en un equipo de tres estudiantes, 
             <article class="achievement-card">
               <div class="achievement-info">
                 <span class="achievement-year">2026</span>
-                <h3>Introducción a la programación con Python</h3>
+                <h3 data-i18n="python-cert-title">Introducción a la programación con Python</h3>
                 <p>Santander Open Academy</p>
-                <p class="achievement-detail">Realizado en octubre de 2026</p>
+                <p class="achievement-detail" data-i18n="python-cert-date">Realizado en octubre de 2026</p>
                 <a href="images/certificacion.png" target="_blank" rel="noopener noreferrer">
-                  Ver certificación
+                  <span data-i18n="view-certificate">Ver certificación</span>
                 </a>
               </div>
               <a
@@ -233,10 +256,12 @@ Desarrollé durante cuatro meses, colaborando en un equipo de tres estudiantes, 
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir certificación del curso de Python"
+                data-i18n-aria-label="python-cert-alt"
               >
                 <img
                   src="images/certificacion.png"
                   alt="Certificado de finalización del curso de Python de Santander Open Academy"
+                  data-i18n-alt="python-cert-alt"
                   loading="lazy"
                 />
               </a>
@@ -255,18 +280,18 @@ Desarrollé durante cuatro meses, colaborando en un equipo de tres estudiantes, 
         <div class="container">
           <div class="section-head">
             <div>
-              <h3 class="section-tag">Otros logros</h3>
+              <h3 class="section-tag" data-i18n="achievements-heading">Otros logros</h3>
             </div>
           </div>
 
           <article class="achievement-card">
             <div class="achievement-info">
               <span class="achievement-year">2026</span>
-              <h3>Finisher de media maratón</h3>
+              <h3 data-i18n="half-marathon-title">Finisher de media maratón</h3>
               <p>Rock 'n' Roll Running Series Madrid</p>
-              <p class="achievement-detail">Tiempo oficial: 1:55:46</p>
+              <p class="achievement-detail" data-i18n="half-marathon-time">Tiempo oficial: 1:55:46</p>
               <a href="images/diploma.png" target="_blank" rel="noopener noreferrer">
-                Ver diploma
+                <span data-i18n="view-diploma">Ver diploma</span>
               </a>
             </div>
             <a
@@ -275,10 +300,12 @@ Desarrollé durante cuatro meses, colaborando en un equipo de tres estudiantes, 
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Abrir diploma de finisher de la media maratón"
+              data-i18n-aria-label="half-marathon-alt"
             >
               <img
                 src="images/diploma.png"
                 alt="Diploma oficial de Bruno Lozano Clemente como finisher de la media maratón de Madrid 2026"
+                data-i18n-alt="half-marathon-alt"
                 loading="lazy"
               />
             </a>
